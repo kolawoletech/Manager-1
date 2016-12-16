@@ -1,6 +1,7 @@
 {
   "extends": "rallycoding",
   "rules": {
-    "linebreak-style": 0
+    "linebreak-style": 0,
+    "arrow-body-style": 0
   }
 }
