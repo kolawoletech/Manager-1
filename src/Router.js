@@ -22,7 +22,7 @@ class RouterComponent extends Component {
             component={EmployeeList} 
             title='Employees' 
             rightTitle='Add'
-            onRight={() => Actions.employeeCreate()}
+            onRight={() => { this.props.clearForm(); Actions.employeeCreate(); }}
             initial
           />
           <Scene key='employeeCreate' component={EmployeeCreate} title='Employee Create' />
@@ -30,10 +30,10 @@ class RouterComponent extends Component {
             key='employeeEdit' 
             component={EmployeeEdit} 
             title='Edit / View Employee' 
-            onBack={() => { this.props.clearForm(); Actions.pop(); }} 
           />
         </Scene>
       </Router>
+      // onBack={() => { this.props.clearForm(); Actions.pop(); }}  cool property
     );
   }
   render() {
