@@ -26,7 +26,12 @@ class RouterComponent extends Component {
             initial
           />
           <Scene key='employeeCreate' component={EmployeeCreate} title='Employee Create' />
-          <Scene key='employeeEdit' component={EmployeeEdit} title='Edit / View Employee' onBack={() => { this.props.clearForm(); Actions.pop(); }} />
+          <Scene 
+            key='employeeEdit' 
+            component={EmployeeEdit} 
+            title='Edit / View Employee' 
+            onBack={() => { this.props.clearForm(); Actions.pop(); }} 
+          />
         </Scene>
       </Router>
     );
